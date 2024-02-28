@@ -1,15 +1,19 @@
 import React from 'react'
-import Medalla from '/public/img/Medalla Mohinora.png'
+import Medalla from '../img/Medalla-mohinora.png'
 
-export const navbar = () => {
+export const Navbar = () => {
   return (
-    <nav classname="navbar bg-body-tertiary">
-        <div classname="container-fluid">
-            <a classname="navbar-brand" href="#">
-            <img src={Medalla} alt="Logo" width="30" height="24" classname="d-inline-block align-text-top">
-            Mohinora
+    <nav className="navbar bg-body-tertiary">
+        <div className="container-fluid">
+            <a className="navbar-brand" href="#">
+              <div className="d-flex align-items-center"> 
+                <img src={Medalla} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
+                <span className="ms-2" style={{ fontFamily: 'abaddon', fontSize: '30px' }}>Mohinora</span> 
+              </div>
             </a>
         </div>
     </nav>  
   )
 }
+
+export default Navbar;
