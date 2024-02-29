@@ -37,7 +37,4 @@
   }
 }
 
-@font-face {
-  font-family: 'abaddon';
-  src: url('./fonts/abaddon.TTF') format('truetype');
-}
+@import url('Fonts.css');

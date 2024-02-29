@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'abaddon';
+    src: url('./fonts/abaddon.TTF') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'abaddon II';
+    src: url('./fonts/abaddon_ll.ttf') format('truetype');
+  }
