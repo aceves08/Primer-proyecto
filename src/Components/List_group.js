@@ -12,7 +12,7 @@ const List_group = () => {
         </div>
       </div>
       <div class="col-8">
-        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="10">
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
           <h4 id="list-item-1" style={{ fontFamily: 'abaddon II', fontSize: '20px' }}>1989</h4>
           <p>En julio Manuel Barrera, Javier Domínguez, Javier Valdés y Julio Macías le dan vida a la mística de Mohinora y 
             en septiembre se funda formalmente siendo su primer Coordinador Manuel Barrera, y Javier Valdés y Javier Domínguez 
