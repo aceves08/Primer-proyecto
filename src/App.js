@@ -19,7 +19,7 @@ function App() {
       <Cards nombre="Cherokees" anio={2006} mistica="Verde, Negro, Blanco y Cafe"/>
       <Cards nombre="Romanos" anio={1995} mistica="Guinda y Azul"/>
       <Divisor Titulo="Ubicacion"/>
-      {/* <Maps_api/>*/}
+      <Maps_api/>
     </div>
   );
 }

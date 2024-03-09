@@ -1,32 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import {GoogleMap, useLoadScript, MarkerF} from '@react-google-maps/api'
 
-const Maps_api = () => {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap`;
-        script.async = true;
-        document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
-
-    function iniciarMap() {
-        var coord = { lat: 28.6405398, lng: -106.0898051 };
-        var map = new window.google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-            center: coord
-        });
-        var marker = new window.google.maps.Marker({
-            position: coord,
-            map: map
-        });
-    }
-
+const Maps_api = (props) => {
+    const {isLoaded, loadError} = useLoadScript({
+        googleMapsApiKey: 'AIzaSyBnBBYXMcmZI6kGH8LMpsGuRJJUzoEB0EU'
+    });
+    const mapRef = React.useRef();
+    const onMapLoad = React.useCallback((map) => {
+        mapRef.current = map;
+    },[]);
+    if(loadError) return "Error";
+   
     return (
-        <div id="map" style={{ height: '400px' }}></div>
+        <div style={{marginTop: "50px"}}> 
+            <GoogleMap mapContainerStyle={{height:"400px"}} center={{lat:28.6405398, lng:-106.0898051}} zoom={19} onLoad={onMapLoad}/>
+        </div>
     );
 };
 
-export default MapsApi;
+export default Maps_api;
